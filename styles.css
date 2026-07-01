@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+:root {
+    --dark: #0f0e0e;
+    --main: #dfdedc; 
+    --red1: #db0505;
+    --red2: #ab0707;
+    --red3: #590909;
+    --red4: #370707;
+    --gray: #221e1e; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overscroll-behavior: none;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--main);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Overlays */
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    pointer-events: none;
+    z-index: 10000;
+}
+
+.noise {
+    background-image: url("assets/noise.gif");
+    opacity: 5%;
+}
+
+.crt {
+    background-image: url("assets/scan.gif");
+    background-size: 400px;
+    opacity: 2%;
+}
+
+/* - - - - - - */
+
+/* Generic */
+
+.middle {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.back {
+    z-index: -1;
+}
+
+.thick-hr {
+    border: none;
+    height: 8px;
+    background-color: var(--red3);
+}
+.double-hr {
+    height: 10px;
+    border: solid 3px;
+    border-left: none;
+    border-right: none;
+    border-color: var(--red1);
+    background-color: var(--red3);
+}
+
+.flashing-r {
+    color: gold; 
+    animation: blink 1.5s linear infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 30%;
+    }
+}
+
+.inline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* - - - - - - */
+
+/* Header */
+
+marquee {
+    font-size: 1.2rem;
+    font-family: "Aldrich", 'Courier New', Courier, monospace;
+    
+    color: var(--red1);
+    background-color: var(--red4);
+    text-shadow: 0px 0px 15px var(--red1);
+
+    padding: 4px;
+}
+
+.scroll {
+    padding: 4px;
+    font-size: 1.2rem;
+    background-color: var(--red3);
+    color: var(--red1)
+}
+
+.bottom-h {
+    background: linear-gradient(0deg, var(--dark) 0%, var(--red4) 70%, var(--dark) 100%);
+    padding: 2rem;
+}
+
+.skull {
+    height: 6rem;  
+}
+
+.title {
+    font-family: "Ephesis", cursive;
+    font-size: 4em; 
+    text-shadow: 0px 0px 20px var(--red1);
+}
+
+header {
+    margin-bottom: 1em;
+}
+
+/* - - - - - - */
+
+/* fake-window */
+
+.window .titlebar {
+    width: 100%;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px 0px 0px;
+    
+    background-color: var(--gray);
+    border-radius: 8px 8px 0 0;
+
+}
+
+.window .window-name {
+    padding: 0.2rem 0 0.1rem 0;
+
+    font-size: 1rem;
+    font-family: "Aldrich";
+    color: var(--red2)
+}
+
+.window .window-icon {
+    height: 1.3rem;
+    align-self: last baseline;
+}
+
+.left-w {
+    flex-grow: 2;
+    margin-right: 0.5em;
+}
+
+.right-w {
+    flex-grow: 1;
+    margin-left: 0.5em;
+}
+
+.window-content {
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark);
+
+    border: solid 6px var(--gray);
+    border-top: none;
+    border-radius: 0px 0px 8px 8px;
+}
+/* - - - - - - */
+
+.news {
+    font-family: sans-serif;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    padding-right: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* Article headings — the "scream" font, dripping red glow */
+.news h1 {
+    font-family: "Nosifer", cursive;
+    font-size: 2.2rem;
+    line-height: 1.3;
+    color: var(--red1);
+    text-shadow:
+        0 0 8px var(--red2),
+        0 0 20px var(--red3),
+        2px 2px 0px var(--dark);
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+}
+
+.news h2 {
+    font-family: "Aldrich", monospace;
+    font-size: 1.4rem;
+    color: var(--red1);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px dashed var(--red3);
+    padding-bottom: 0.4rem;
+    margin: 2rem 0 1rem;
+}
+
+.news h3 {
+    font-family: "Aldrich", monospace;
+    font-size: 1.1rem;
+    color: var(--main);
+    opacity: 0.85;
+    font-style: italic;
+    margin: 1.5rem 0 0.8rem;
+}
+
+/* Body text — typewriter feel, slightly loose leading like old blog templates */
+.news p {
+    font-family: "Special Elite", "Courier New", monospace;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--main);
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+/* First paragraph gets a dropcap, classic blogspot horror-theme move */
+.news p:first-of-type::first-letter {
+    font-family: "Nosifer", cursive;
+    font-size: 3.2rem;
+    float: left;
+    line-height: 0.8;
+    padding: 0.1rem 0.5rem 0 0;
+    color: var(--red1);
+    text-shadow: 0 0 10px var(--red2);
+}
+
+/* Blockquotes / eyewitness testimony — indented, torn-paper vibe */
+.news q {
+    display: block;
+    font-family: "Special Elite", monospace;
+    font-style: italic;
+    color: var(--red1);
+    background-color: var(--gray);
+    border-left: 4px solid var(--red2);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    quotes: "“" "”";
+}
+
+.news q::before {
+    content: open-quote;
+    color: var(--red2);
+    font-size: 1.5rem;
+    margin-right: 0.2rem;
+}
+
+.news q::after {
+    content: close-quote;
+    color: var(--red2);
+    font-size: 1.5rem;
+}
+
+.news pre {
+    font-family: "Courier New", monospace;
+    background-color: #000;
+    color: var(--red1);
+    border: 1px solid var(--red3);
+    padding: 1.2rem;
+    overflow-x: auto;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    box-shadow: inset 0 0 15px var(--red4);
+    margin: 1.5rem 0;
+}
+
+/* Old-web touch: custom text selection color */
+.news ::selection {
+    background: var(--red2);
+    color: var(--dark);
+}
+
+@media screen and (orientation: portrait) {
+    .middle {
+        margin: 0 1em 0 1em;
+    }
+}
+
