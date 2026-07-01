@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 :root {
@@ -198,7 +197,7 @@ header {
 
 /* Article headings — the "scream" font, dripping red glow */
 .news h1 {
-    font-family: "Nosifer", cursive;
+    font-family: "Ephesis", cursive;
     font-size: 2.2rem;
     line-height: 1.3;
     color: var(--red1);
@@ -242,7 +241,7 @@ header {
 
 /* First paragraph gets a dropcap, classic blogspot horror-theme move */
 .news p:first-of-type::first-letter {
-    font-family: "Nosifer", cursive;
+    font-family: "Ephesis", cursive;
     font-size: 3.2rem;
     float: left;
     line-height: 0.8;
