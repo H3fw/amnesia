@@ -20,6 +20,11 @@
     overscroll-behavior: none;
 }
 
+body, html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background-color: var(--dark);
     color: var(--main);
@@ -134,7 +139,6 @@ marquee {
 
 header {
     margin-bottom: 1em;
-    width: 100vw;
 }
 
 /* - - - - - - */
