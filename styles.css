@@ -171,16 +171,6 @@ header {
     align-self: last baseline;
 }
 
-.left-w {
-    flex-grow: 2;
-    margin-right: 0.5em;
-}
-
-.right-w {
-    flex-grow: 1;
-    margin-left: 0.5em;
-}
-
 .window-content {
     width: 100%;
     height: 100%;
