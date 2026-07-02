@@ -30,11 +30,6 @@ body {
     overflow-x: hidden;
 }
 
-.content {
-    display: flex;
-    justify-content: space-between;
-}
-
 /* Overlays */
 
 .overlay {
@@ -128,12 +123,12 @@ marquee {
 }
 
 .skull {
-    height: 6rem;  
+    height: clamp(3rem, 12vw, 6rem);  
 }
 
 .title {
     font-family: "Ephesis", cursive;
-    font-size: 4em; 
+    font-size: clamp(2rem, 10vw, 4em);
     text-shadow: 0px 0px 20px var(--red1);
 }
 
