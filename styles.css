@@ -281,7 +281,7 @@ header {
     font-size: 1.5rem;
 }
 
-.news pre {
+.news .pres {
     font-family: "Courier New", monospace;
     background-color: #000;
     color: var(--red1);
